@@ -53,27 +53,27 @@ This guide will walk you through the process of setting up a home server on your
    ```
    Update & Upgrade
 Run the following commands to update the system:
-bash
-Copy code
+```bash
 sudo apt update
 sudo apt upgrade -y
+```
 Installing Video Streaming Software
 1. Plex Media Server
 Install Plex
 Add the Plex repo and install Plex Media Server:
 
-bash
-Copy code
+```bash
 curl https://downloads.plex.tv/plex-keys/PlexSign.key | sudo apt-key add -
 echo deb https://downloads.plex.tv/repo/deb public main | sudo tee /etc/apt/sources.list.d/plexmediaserver.list
 sudo apt update
 sudo apt install plexmediaserver -y
+```
 Enable and Start Plex
 
-bash
-Copy code
+```bash
 sudo systemctl enable plexmediaserver
 sudo systemctl start plexmediaserver
+```
 Access Plex
 Open your web browser and navigate to http://<YOUR_RPI_IP>:32400/web to set up your media server.
 
@@ -81,19 +81,19 @@ Open your web browser and navigate to http://<YOUR_RPI_IP>:32400/web to set up y
 Install Jellyfin
 Run the following commands to install Jellyfin:
 
-bash
-Copy code
+```bash
 sudo apt install apt-transport-https
 wget -O - https://repo.jellyfin.org/debian/jellyfin_team.gpg.key | sudo apt-key add -
 echo "deb [arch=$( dpkg --print-architecture )] https://repo.jellyfin.org/debian buster main" | sudo tee /etc/apt/sources.list.d/jellyfin.list
 sudo apt update
 sudo apt install jellyfin -y
+```
 Enable and Start Jellyfin
 
-bash
-Copy code
+```bash
 sudo systemctl enable jellyfin
 sudo systemctl start jellyfin
+```
 Access Jellyfin
 Open your web browser and navigate to http://<YOUR_RPI_IP>:8096 to set up Jellyfin.
 
@@ -102,38 +102,38 @@ Setting Up Game Streaming
 Install Steam Link
 Install Steam Link from the Raspbian package repository:
 
-bash
-Copy code
+```bash
 sudo apt install steamlink
+```
 Launch Steam Link
 Run:
 
-bash
-Copy code
+```bash
 steamlink
+```
 This will open the Steam Link interface, where you can pair with your Steam account and begin game streaming.
 
 2. Moonlight (NVIDIA GameStream)
 Install Moonlight
 Add Moonlight repo and install:
 
-bash
-Copy code
+```bash
 sudo apt-add-repository ppa:moonlight-stream/moonlight
 sudo apt update
 sudo apt install moonlight -y
+```
 Pair with GameStream
 Use the following command to pair with your gaming PC (make sure you have an NVIDIA GPU):
 
-bash
-Copy code
+```bash
 moonlight pair <Your PC IP>
+```
 Start Streaming
 Once paired, stream your games with:
 
-bash
-Copy code
+```bash
 moonlight stream <Your PC IP>
+```
 Accessing Your Server
 Once your server is up and running:
 
@@ -152,9 +152,9 @@ Useful Tips
 For better performance, always use Ethernet over WiFi, especially for game streaming.
 External storage is highly recommended for storing large video libraries.
 Keep your Raspberry Pi updated:
-bash
-Copy code
+```bash
 sudo apt update && sudo apt upgrade -y
+```
 Troubleshooting
 Video lag on Plex/Jellyfin: Ensure you're using a fast connection and try transcoding the video to a lower resolution for smoother playback.
 Steam Link connection issues: Make sure both the Pi and your PC are on the same network and firewall rules allow traffic.
