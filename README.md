@@ -75,7 +75,7 @@ sudo systemctl enable plexmediaserver
 sudo systemctl start plexmediaserver
 ```
 Access Plex
-Open your web browser and navigate to http://<YOUR_RPI_IP>:32400/web to set up your media server.
+Open your web browser and navigate to `http://<YOUR_RPI_IP>:32400/web` to set up your media server.
 
 2. Jellyfin
 Install Jellyfin
@@ -95,7 +95,7 @@ sudo systemctl enable jellyfin
 sudo systemctl start jellyfin
 ```
 Access Jellyfin
-Open your web browser and navigate to http://<YOUR_RPI_IP>:8096 to set up Jellyfin.
+Open your web browser and navigate to `http://<YOUR_RPI_IP>:8096` to set up Jellyfin.
 
 Setting Up Game Streaming
 1. Steam Link
