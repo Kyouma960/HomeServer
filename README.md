@@ -57,10 +57,10 @@ Run the following commands to update the system:
 sudo apt update
 sudo apt upgrade -y
 ```
-Installing Video Streaming Software
-1. Plex Media Server
-Install Plex
-Add the Plex repo and install Plex Media Server:
+## Installing Video Streaming Software
+1. **Plex Media Server**
+    **Install Plex**
+    Add the Plex repo and install Plex Media Server:
 
 ```bash
 curl https://downloads.plex.tv/plex-keys/PlexSign.key | sudo apt-key add -
@@ -68,17 +68,17 @@ echo deb https://downloads.plex.tv/repo/deb public main | sudo tee /etc/apt/sour
 sudo apt update
 sudo apt install plexmediaserver -y
 ```
-Enable and Start Plex
+**Enable and Start Plex**
 
 ```bash
 sudo systemctl enable plexmediaserver
 sudo systemctl start plexmediaserver
 ```
-Access Plex
+**Access Plex**
 Open your web browser and navigate to `http://<YOUR_RPI_IP>:32400/web` to set up your media server.
 
-2. Jellyfin
-Install Jellyfin
+**2. Jellyfin**
+    **Install Jellyfin**
 Run the following commands to install Jellyfin:
 
 ```bash
@@ -94,10 +94,10 @@ Enable and Start Jellyfin
 sudo systemctl enable jellyfin
 sudo systemctl start jellyfin
 ```
-Access Jellyfin
+**Access Jellyfin**
 Open your web browser and navigate to `http://<YOUR_RPI_IP>:8096` to set up Jellyfin.
 
-Setting Up Game Streaming
+## Setting Up Game Streaming
 1. Steam Link
 Install Steam Link
 Install Steam Link from the Raspbian package repository:
@@ -113,7 +113,7 @@ steamlink
 ```
 This will open the Steam Link interface, where you can pair with your Steam account and begin game streaming.
 
-2. Moonlight (NVIDIA GameStream)
+## 2. Moonlight (NVIDIA GameStream)
 Install Moonlight
 Add Moonlight repo and install:
 
