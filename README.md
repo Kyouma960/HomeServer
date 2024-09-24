@@ -160,9 +160,3 @@ Video lag on Plex/Jellyfin: Ensure you're using a fast connection and try transc
 Steam Link connection issues: Make sure both the Pi and your PC are on the same network and firewall rules allow traffic.
 Moonlight not pairing: Verify that NVIDIA GameStream is enabled on your PC.
 With this setup, you'll have a fully functional home server for both media and game streaming on your Raspberry Pi!
-sudo apt update && sudo apt upgrade -y
-Troubleshooting
-Video lag on Plex/Jellyfin: Ensure you're using a fast connection and try transcoding the video to a lower resolution for smoother playback.
-Steam Link connection issues: Make sure both the Pi and your PC are on the same network and firewall rules allow traffic.
-Moonlight not pairing: Verify that NVIDIA GameStream is enabled on your PC.
-With this setup, you'll have a fully functional home server for both media and game streaming on your Raspberry Pi!
