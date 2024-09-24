@@ -50,7 +50,8 @@ This guide will walk you through the process of setting up a home server on your
    Insert the SD card into your Pi, power it on, and connect via SSH using its local IP:
    ```bash
    ssh pi@<YOUR_RPI_IP>
-Update & Upgrade
+   ```
+   Update & Upgrade
 Run the following commands to update the system:
 bash
 Copy code
@@ -152,6 +153,13 @@ For better performance, always use Ethernet over WiFi, especially for game strea
 External storage is highly recommended for storing large video libraries.
 Keep your Raspberry Pi updated:
 bash
+Copy code
+sudo apt update && sudo apt upgrade -y
+Troubleshooting
+Video lag on Plex/Jellyfin: Ensure you're using a fast connection and try transcoding the video to a lower resolution for smoother playback.
+Steam Link connection issues: Make sure both the Pi and your PC are on the same network and firewall rules allow traffic.
+Moonlight not pairing: Verify that NVIDIA GameStream is enabled on your PC.
+With this setup, you'll have a fully functional home server for both media and game streaming on your Raspberry Pi!
 sudo apt update && sudo apt upgrade -y
 Troubleshooting
 Video lag on Plex/Jellyfin: Ensure you're using a fast connection and try transcoding the video to a lower resolution for smoother playback.
