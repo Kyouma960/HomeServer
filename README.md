@@ -134,29 +134,45 @@ Once paired, stream your games with:
 ```bash
 moonlight stream <Your PC IP>
 ```
-Accessing Your Server
+## Accessing Your Server
+
 Once your server is up and running:
 
-Plex Media Server: http://<YOUR_RPI_IP>:32400/web
-Jellyfin: http://<YOUR_RPI_IP>:8096
-Steam Link: Can be accessed via the Pi’s desktop or directly from a TV/monitor connected to the Pi.
-Moonlight: Use Moonlight’s commands to stream from a client device.
-Optional: Remote Access Setup
+- **Plex Media Server**: `http://<YOUR_RPI_IP>:32400/web`
+- **Jellyfin**: `http://<YOUR_RPI_IP>:8096`
+- **Steam Link**: Can be accessed via the Pi’s desktop or directly from a TV/monitor connected to the Pi.
+- **Moonlight**: Use Moonlight’s commands to stream from a client device.
+
+---
+
+## Optional: Remote Access Setup
+
 To access your media server from outside your home:
 
-Set up port forwarding on your router for:
-Plex: Port 32400
-Jellyfin: Port 8096
-Use a dynamic DNS service like No-IP to assign a hostname to your public IP.
-Useful Tips
-For better performance, always use Ethernet over WiFi, especially for game streaming.
-External storage is highly recommended for storing large video libraries.
-Keep your Raspberry Pi updated:
-```bash
-sudo apt update && sudo apt upgrade -y
-```
-Troubleshooting
-Video lag on Plex/Jellyfin: Ensure you're using a fast connection and try transcoding the video to a lower resolution for smoother playback.
-Steam Link connection issues: Make sure both the Pi and your PC are on the same network and firewall rules allow traffic.
-Moonlight not pairing: Verify that NVIDIA GameStream is enabled on your PC.
+1. Set up port forwarding on your router for:
+   - **Plex**: Port `32400`
+   - **Jellyfin**: Port `8096`
+   
+2. Use a dynamic DNS service like [No-IP](https://www.noip.com/) to assign a hostname to your public IP.
+
+---
+
+## Useful Tips
+
+- For better performance, always use Ethernet over WiFi, especially for game streaming.
+- External storage is highly recommended for storing large video libraries.
+- Keep your Raspberry Pi updated:
+  ```bash
+  sudo apt update && sudo apt upgrade -y
+  ```
+---
+
+## Troubleshooting
+
+- **Video lag on Plex/Jellyfin**: Ensure you're using a fast connection and try transcoding the video to a lower resolution for smoother playback.
+- **Steam Link connection issues**: Make sure both the Pi and your PC are on the same network and firewall rules allow traffic.
+- **Moonlight not pairing**: Verify that NVIDIA GameStream is enabled on your PC.
+
+---
+
 With this setup, you'll have a fully functional home server for both media and game streaming on your Raspberry Pi!
