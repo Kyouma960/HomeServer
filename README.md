@@ -2,7 +2,6 @@
 
 This guide will walk you through the process of setting up a home server on your Raspberry Pi (RPI) to stream video and play games over your local network.
 
-![image](https://github.com/user-attachments/assets/4cd54071-dac8-4c7e-b617-d682a7e05638)
 
 
 ## Table of Contents
